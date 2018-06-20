@@ -8,7 +8,6 @@
   args:
     chdir: /opt/certbot
     executable: /bin/bash
-  ignore_errors: true
   register: _certbot_command
 
 - set_fact: _signing_successful='{{ certbot_success_message in _certbot_command.stdout }}'
